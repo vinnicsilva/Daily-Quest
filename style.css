@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, rgb(42, 42, 64), rgb(19, 19, 25));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header, footer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(to bottom, rgb(24, 24, 81), rgb(15, 15, 50));
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(24, 24, 81), rgb(15, 15, 50));
+    color: rgb(0, 119, 255);
+    font-size: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+header a, 
+footer a {
+    text-decoration: none;
+    color: rgb(255, 255, 203);
+}
+
+.hidden {
+    display: none;
+}
+
+/* container */
+
+.container {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 119, 255);
+    background: linear-gradient(to bottom, rgb(24, 24, 81), rgb(15, 15, 50));
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+}
+
+.container hr {
+    width: 100%;
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid rgb(0, 119, 255);
+}
+
+.container button {
+    background-color: rgb(0, 119, 255);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.container button:hover {
+    background: linear-gradient(to bottom, rgb(24, 24, 81), rgb(15, 15, 50));
+    border: solid 1px rgb(0, 119, 255);
+    color: rgb(0, 119, 255);
+}
+.container input[type="text"] {
+    padding: 10px;
+    background: linear-gradient(to bottom, rgb(36, 36, 119), rgb(26, 26, 85));
+    color: rgb(0, 119, 255);
+    border: none;
+    border-radius: 5px;
+}
+
+progress {
+    background-color: rgba(0, 0, 0, 0.393);
+    border: solid 1px rgb(0, 119, 255);
+    border-radius: 5px;
+    height: 10px;
+    width: 110px;
+}
+
+progress::-moz-progress-bar {
+    background: linear-gradient(to left, rgb(0, 255, 47), rgb(0, 103, 22));
+    border-radius: 5px;
+}
+
+/* tasks */
+
+.task-box {
+    border-radius: 5px;
+    background: linear-gradient(to bottom, rgb(36, 36, 119), rgb(26, 26, 85));
+    color: rgb(0, 119, 255);
+    margin-bottom: 10px;
+}
+
+.task-box {
+    border-radius: 5px;
+    background: linear-gradient(to bottom, rgb(36, 36, 119), rgb(26, 26, 85));
+    color: rgb(0, 119, 255);
+    margin-bottom: 10px;
+}
+
+.task-box p {
+    font-size: 0.5em;
+}
+
+.task-options {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.task-options i {
+    font-size: 1em;
+}
+
+.task-options button {
+    background: none;
+    border: none;
+    color: rgb(0, 119, 255);
+    cursor: pointer;
+}
+
+.task-box progress {
+    background-color: rgba(0, 0, 0, 0.393);
+    border: solid 1px rgb(0, 119, 255);
+    border-radius: 5px;
+    width: 90%;
+}
+
+.task-box progress::-moz-progress-bar {
+    background: linear-gradient(to left, rgb(0, 255, 47), rgb(0, 103, 22));
+    border-radius: 5px;
+}
+
+/* user tools */
+
+.user-tools img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-tools label {
+    color: white;
+}
+
+/* layout for user tools */
+.user-tools {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.user-menu {
+    position: relative;
+}
+
+.user-menu a#user-button h4 {
+    margin: 0;
+    color: rgb(255, 255, 203);
+}
+
+.user-dropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    background: linear-gradient(to bottom, rgb(24,24,81), rgb(15,15,50));
+    border: 1px solid rgb(0, 119, 255);
+    border-radius: 6px;
+    min-width: 140px;
+    display: none;
+    flex-direction: column;
+    padding: 6px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    z-index: 50;
+}
+
+.user-dropdown.show {
+    display: flex;
+}
+
+.user-dropdown a {
+    color: rgb(0, 119, 255);
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.user-dropdown a:hover {
+    background: rgba(0,119,255,0.08);
+    color: rgb(255,255,203);
+}
+
+/* formularios de cadastro/login */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form a {
+    text-decoration: none;
+    color: greenyellow;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    padding: 10px;
+    background: linear-gradient(to bottom, rgb(36, 36, 119), rgb(26, 26, 85));
+    color: rgb(0, 119, 255);
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+form button {
+    width: 178px;
+    margin: 5px;
+}
+
+.viewpass {
+    position: absolute;
+    right: 675px;
+    top: 436px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    height: 38px;
+    width: 38px;
+}
