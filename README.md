@@ -19,6 +19,7 @@ LINGUAGENS:
 =========== PROGRESSO ================================================================
 
 15/02/2026 - criação do repositório (apenas README.MD)
+
 17/02/2026 - criação das páginas iniciais, sistema de conexão e página de login
 
 =====================================================================================
